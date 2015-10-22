@@ -152,8 +152,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_listAppointmentTypes_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/practitioners/22222222/appointment_types";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_listAppointmentTypes_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -208,8 +207,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_getAppointmentType_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/appointment_types/22222222";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_getAppointmentType_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -446,8 +444,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_getAppointment_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/appointments/444444444";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_getAppointment_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -543,8 +540,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_listAppointments_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/appointments?sort=appointment";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_listAppointments_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
@@ -729,8 +725,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
         final String apiEndpoint = apiEndpointUrl + "/businesses/" + connectorProperties.getProperty("businessId")
                 + "/practitioners/" + connectorProperties.getProperty("practitionerId") + "/appointment_types/"
                 + connectorProperties.getProperty("appointmentTypeId") + "/available_times";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_listAvailableTimes_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
@@ -789,8 +784,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
         final String apiEndpoint = apiEndpointUrl + "/businesses/" + connectorProperties.getProperty("businessId")
                 + "/practitioners/" + connectorProperties.getProperty("practitionerId")
                 + "/appointment_types/777777/next_available_time";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_getNextAvailableTime_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -852,8 +846,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_getBusiness_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/businesses/33333333";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_getBusiness_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -946,8 +939,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_listBusinesses_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/businesses?sort=name";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_listBusinesses_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
@@ -1003,8 +995,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_getInvoice_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/invoices/999999999";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_getInvoice_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -1099,8 +1090,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_listInvoices_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/practitioners/55555/invoices";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_listInvoices_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -1157,8 +1147,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_getMedicalAlert_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/medical_alerts/555555555";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_getMedicalAlert_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -1254,8 +1243,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_listMedicalAlerts_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/medical_alerts?sort=patient_name";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_listMedicalAlerts_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
@@ -1472,8 +1460,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_getPatient_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/patients/11111111";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_getPatient_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -1625,8 +1612,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_getPractitioner_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/practitioners/333333";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_getPractitioner_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -1722,8 +1708,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_listPractitioners_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/practitioners?sort=invalid";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_listPractitioners_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
@@ -1780,8 +1765,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_getProduct_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/products/88888888";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_getProduct_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
@@ -1879,8 +1863,7 @@ public class ClinikoConnectorIntegrationTest extends ConnectorIntegrationTestBas
                 "esb_listProducts_negative.json");
                 
         final String apiEndpoint = apiEndpointUrl + "/products?sort=item_bar_code";
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap,
-                "api_listProducts_negative.json");
+        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndpoint, "GET", apiRequestHeadersMap);
                 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
