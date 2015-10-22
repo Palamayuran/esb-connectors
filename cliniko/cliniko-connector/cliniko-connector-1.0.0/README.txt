@@ -54,8 +54,8 @@ STEPS:
    xvii)     optionalPatientDateOfBirth      - Date of birth of the patient for createPatient optional case. A date in the past format as 'yyyy-MM-dd'.
    xiii)     optionalPatientEmail            - Email of the patient for createPatient optional case. Email needs to be in the valid format '<username>@<sub-domain>.<domain>'.
    xix)      mandatoryPatientFirstName       - First name of the patient for createPatient mandatory case.
-   xx)       optionalPatientFirstName        - First name 1 of the patient for createPatient optional case.
-   xxi)      optionalPatientGender           - Gender 1 of the patient for createPatient optional case. Use 'Male' or 'Female'.
+   xx)       optionalPatientFirstName        - First name of the patient for createPatient optional case.
+   xxi)      optionalPatientGender           - Gender of the patient for createPatient optional case. Use 'Male' or 'Female'.
    xxii)     mandatoryPatientLastName        - Last name of the patient for createPatient mandatory case.
    xxiii)    optionalPatientLastName         - Last name of the patient for createPatient optional case.
    xxiv)     medicalAlertName                - Name of the medical alert.
